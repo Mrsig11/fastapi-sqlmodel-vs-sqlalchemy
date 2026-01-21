@@ -1,0 +1,13 @@
+services:
+  api:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    container_name: todo-api
+    ports:
+      - "8000:8000"
+    environment:
+      ORM_ENGINE: sqlmodel
+    volumes:
+      - ../:/app
+    command: uvicorn app.main:app --host 0.0.0.0 --port 8000
