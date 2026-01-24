@@ -1,0 +1,1 @@
+Les tests ont été organisés en tests unitaires, d’intégration et de performance afin de valider la correction fonctionnelle tout en mesurant précisément l’impact du choix de l’ORM.

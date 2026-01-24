@@ -1,6 +1,6 @@
 from sqlalchemy.orm import Session
 from app.models.sqlalchemy.todo import Todo
-from app.schemas.todo import TodoCreate
+from app.schemas.todo import TodoCreate, TodoRead
 
 class SqlAlchemyTodoRepository:
     def __init__(self, session: Session):
@@ -16,7 +16,7 @@ class SqlAlchemyTodoRepository:
         self.session.refresh(todo)
         return todo
     
-    def update(self, id: int, data: TodoCreate):
+    def update(self, id: int, data: TodoRead):
         todo = self.session.query(Todo).filter(Todo.id == id).first()
         todo.title = data.title
         todo.completed = data.completed

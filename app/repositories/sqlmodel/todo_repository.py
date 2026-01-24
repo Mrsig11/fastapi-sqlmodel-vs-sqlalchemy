@@ -18,7 +18,7 @@ class SqlModelTodoRepository:
         self.session.refresh(todo)
         return todo
     
-    def update(self, id: int, data: TodoCreate):
+    def update(self, id: int, data: TodoRead):
         todo = self.session.get(Todo, id)
         todo.title = data.title
         todo.completed = data.completed
