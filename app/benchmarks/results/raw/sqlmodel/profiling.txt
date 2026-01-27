@@ -1,0 +1,36 @@
+sqlmodel
+sqlmodel
+▶ Starting memory tracing...
+▶ CPU profiling results:
+         65522466 function calls (65499683 primitive calls) in 219.068 seconds
+
+   Ordered by: cumulative time
+   List reduced from 1742 to 20 due to restriction <20>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.001    0.001  219.093  219.093 /Users/macbook/Documents/PROJETS/PERSO/Article/sqlmodel vs sqlalchemy/sqlmodel/app/benchmarks/profiling.py:13(run_requests)
+      200    0.001    0.000  219.091    1.095 /Users/macbook/Documents/PROJETS/PERSO/Article/.venv/lib/python3.13/site-packages/starlette/testclient.py:421(request)
+      200    0.001    0.000  218.876    1.094 /Users/macbook/Documents/PROJETS/PERSO/Article/.venv/lib/python3.13/site-packages/httpx/_client.py:771(request)
+      200    0.002    0.000  218.782    1.094 /Users/macbook/Documents/PROJETS/PERSO/Article/.venv/lib/python3.13/site-packages/httpx/_client.py:879(send)
+5000/4000    0.015    0.000  218.754    0.055 {built-in method builtins.next}
+      200    0.002    0.000  218.736    1.094 /Users/macbook/Documents/PROJETS/PERSO/Article/.venv/lib/python3.13/site-packages/httpx/_client.py:930(_send_handling_auth)
+      200    0.002    0.000  218.730    1.094 /Users/macbook/Documents/PROJETS/PERSO/Article/.venv/lib/python3.13/site-packages/httpx/_client.py:964(_send_handling_redirects)
+      200    0.016    0.000  218.728    1.094 /Users/macbook/Documents/PROJETS/PERSO/Article/.venv/lib/python3.13/site-packages/httpx/_client.py:1001(_send_single_request)
+      400    0.004    0.000  218.644    0.547 /Users/macbook/Documents/PROJETS/PERSO/Article/.venv/lib/python3.13/site-packages/starlette/testclient.py:413(_portal_factory)
+      200    0.047    0.000  218.613    1.093 /Users/macbook/Documents/PROJETS/PERSO/Article/.venv/lib/python3.13/site-packages/starlette/testclient.py:217(handle_request)
+2000/1600    0.008    0.000  218.554    0.137 /usr/local/Cellar/python@3.13/3.13.5/Frameworks/Python.framework/Versions/3.13/lib/python3.13/contextlib.py:145(__exit__)
+      400    0.004    0.000  218.550    0.546 /Users/macbook/Documents/PROJETS/PERSO/Article/.venv/lib/python3.13/site-packages/anyio/from_thread.py:499(start_blocking_portal)
+      200    0.003    0.000  218.458    1.092 /usr/local/Cellar/python@3.13/3.13.5/Frameworks/Python.framework/Versions/3.13/lib/python3.13/threading.py:1058(join)
+      200    0.011    0.000  218.449    1.092 {method 'join' of '_thread._ThreadHandle' objects}
+  400/200    0.002    0.000  218.437    1.092 /usr/local/Cellar/python@3.13/3.13.5/Frameworks/Python.framework/Versions/3.13/lib/python3.13/threading.py:1000(_bootstrap)
+  400/200    0.007    0.000  218.434    1.092 /usr/local/Cellar/python@3.13/3.13.5/Frameworks/Python.framework/Versions/3.13/lib/python3.13/threading.py:1027(_bootstrap_inner)
+      200    0.001    0.000  218.427    1.092 /usr/local/Cellar/python@3.13/3.13.5/Frameworks/Python.framework/Versions/3.13/lib/python3.13/threading.py:983(run)
+      200    0.005    0.000  218.426    1.092 /Users/macbook/Documents/PROJETS/PERSO/Article/.venv/lib/python3.13/site-packages/anyio/from_thread.py:529(run_blocking_portal)
+      200    0.003    0.000  218.095    1.090 /Users/macbook/Documents/PROJETS/PERSO/Article/.venv/lib/python3.13/site-packages/anyio/_core/_eventloop.py:38(run)
+      600    0.007    0.000  217.945    0.363 /usr/local/Cellar/python@3.13/3.13.5/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/base_events.py:689(run_until_complete)
+
+
+
+▶ Memory usage:
+Current: 4093.92 KB
+Peak:    63682.30 KB

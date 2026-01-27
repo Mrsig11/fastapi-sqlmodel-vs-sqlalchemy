@@ -6,6 +6,7 @@ from app.core.config import ORM_ENGINE
 from app.models.sqlalchemy.base import Base as SA_Base
 from app.models.sqlmodel.todo import Todo as SQLModelTodo
 
+print(ORM_ENGINE)
 
 DATABASE_URL = "sqlite:///./todo.db"
 
@@ -38,7 +39,7 @@ def get_db():
             yield db
         finally:
             db.close()
-    else:
+    elif ORM_ENGINE == "sqlmodel":
         with Session(sqlmodel_engine) as session:
             yield session
 
@@ -46,5 +47,5 @@ def get_db():
 def init_db():
     if ORM_ENGINE == "sqlalchemy":
         SA_Base.metadata.create_all(bind=sqlalchemy_engine)
-    else:
+    elif ORM_ENGINE == "sqlmodel":
         SQLModel.metadata.create_all(sqlmodel_engine)

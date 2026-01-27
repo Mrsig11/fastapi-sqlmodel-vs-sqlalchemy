@@ -10,7 +10,7 @@ export const options = {
   },
 };
 
-const BASE_URL = 'http://localhost:8000';
+const BASE_URL = 'http://localhost:8000/api/v1';
 
 export default function () {
   // Health check
